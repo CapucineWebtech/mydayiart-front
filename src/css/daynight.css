@@ -1,0 +1,33 @@
+.btn-day-night{
+    background: var(--white-to-black);
+    width: 90px;
+    height: 45px;
+    border-radius: 100px;
+    border: solid var(--black-to-white) 3px;
+    padding: 4px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    transition: background-color 0.9s ease;
+}
+
+.icon-day-night-container{
+    height: 29px;
+    width: 29px;
+    background: var(--black-to-white);
+    border-radius: 100%;
+    padding: 8px;
+    position: absolute;
+    transition: background-color 0.9s ease, right 0.9s ease;
+}
+
+.icon-day-night-container.night{
+    right: 5px;
+}
+
+@media (max-width: 768px) {
+    .btn-day-night{
+        top: 90%;
+        left: 15px;
+    }
+}

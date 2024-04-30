@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-display {
+    font-size: 40px;
+    font-family: 'Wallpoet', sans-serif;
+    margin-bottom: 15px;
+}
+
+.timer-controls button {
+    display: block;
+    width: 50%;
+    height: 60px;
+    cursor: pointer;
+}
+
+.timer-controls button:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+
+.time-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.timer-controls {
+    width: -webkit-fill-available;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    display: flex;
+}
+
+.timer-separator {
+    height: 40px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: var(--white-to-black);
+    display: block;
+    margin: auto;
+}

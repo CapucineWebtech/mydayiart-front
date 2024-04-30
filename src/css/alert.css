@@ -1,0 +1,39 @@
+.alert {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 15px 15px 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+}
+
+.alert-close-btn {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 4.5px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.alert-text{
+    margin: auto;
+}
+
+.alert-warning {
+    background-color: var(--warning-color);
+    border: solid var(--warning-color-dark) 2px;
+}
+
+.alert-error {
+    background-color: var(--danger-color);
+    border: solid var(--danger-color-dark) 2px;
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    border: solid var(--success-color-dark) 2px;
+}

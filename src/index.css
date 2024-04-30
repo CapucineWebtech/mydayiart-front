@@ -7,7 +7,105 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --primary-color: #6ABBDE;
+  --primary-color-light: #77D1F7;
+  --primary-color-dark: #5EA6C4;
+  --secondary-color: #943C8F;
+  --secondary-color-light: #AD47A8;
+  --secondary-color-dark: #7A3277;
+  --warning-color: #FFBF00;
+  --warning-color-dark: #E6AC00;
+  --danger-color: #D84624;
+  --danger-color-dark: #BF3E21;
+  --success-color: #22E642;
+  --success-color-dark: #1FCC3B;
+  --little-margin: 15px;
+  --medium-margin: 30px;
+  --small-font-size: 14px;
+  --medium-font-size: 16px;
+  --big-font-size: 18px;
+  --bigger-font-size: 22px;
+}
+
+:root {
+  --white-to-black: #ffffff;
+  --black-to-white: #000000;
+  --body-background: #f1f1f1;
+  --header-background: #ffffff;
+  --light-to-medium: #e9e9e9;
+}
+
+.night-theme {
+  --white-to-black: #000000;
+  --black-to-white: #ffffff;
+  --body-background: #191919;
+  --header-background: #393939;
+  --light-to-medium: #5f5f5f;
+}
+
+body {
+  background-color: var(--body-background);
+  color: var(--black-to-white);
+}
+
+.page-container{
+  padding: var(--little-margin);
+  margin-top: 90px;
+}
+
+.btn{
+  color: var(--white-to-black);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--medium-font-size);
+  width: -webkit-fill-available;
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover{
+  background-color: var(--primary-color-dark);
+}
+
+.btn-secondary{
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover{
+  background-color: var(--secondary-color-dark);
+}
+
+.btn-warning{
+  background-color: var(--warning-color);
+}
+
+.btn-warning:hover{
+  background-color: var(--warning-color-dark);
+}
+
+.btn-danger{
+  background-color: var(--danger-color);
+}
+
+.btn-danger:hover{
+  background-color: var(--danger-color-dark);
 }

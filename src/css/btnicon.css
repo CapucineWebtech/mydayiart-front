@@ -1,0 +1,17 @@
+.btn-icon{
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.btn-icon-icon{
+    min-height: 30px;
+    height: 30px;
+    min-width: 30px;
+    width: 30px;
+    margin: auto 15px auto 0;
+}
+
+.btn-icon-text{
+    margin: auto 0;
+}

@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../css/timer.css';
 import Icon from './Icon';
+import '../css/timer.css';
 
 const Timer = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
   const intervalRef = useRef(null);
+
+  const formatTime = (time) => {
+    const seconds = Math.floor((time / 1000) % 60);
+    const minutes = Math.floor((time / 60000) % 60);
+    const hours = Math.floor((time / 3600000));
+    return [hours, minutes, seconds].map(v => v < 10 ? '0' + v : v).join(':');
+  };
 
   const toggleTimer = () => {
     if (isRunning) {
@@ -33,13 +40,6 @@ const Timer = () => {
 
     return () => clearInterval(intervalRef.current);
   }, []);
-
-  const formatTime = (time) => {
-    const seconds = Math.floor((time / 1000) % 60);
-    const minutes = Math.floor((time / 60000) % 60);
-    const hours = Math.floor((time / 3600000));
-    return [hours, minutes, seconds].map(v => v < 10 ? '0' + v : v).join(':');
-  };
 
   return (
     <div className="timer-container">

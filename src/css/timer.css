@@ -21,12 +21,12 @@
 
 .timer-controls button:hover {
     background-color: var(--secondary-color-dark);
+    border-radius: 5px;
 }
 
-
 .time-icon {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
 }
 
 .timer-controls {
@@ -37,7 +37,7 @@
 }
 
 .timer-separator {
-    height: 40px;
+    height: 30px;
     width: 5px;
     border-radius: 10px;
     background-color: var(--white-to-black);

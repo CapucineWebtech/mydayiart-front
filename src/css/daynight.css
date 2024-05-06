@@ -9,6 +9,7 @@
     top: 15px;
     right: 15px;
     transition: background-color 0.9s ease;
+    z-index: 11;
 }
 
 .icon-day-night-container{

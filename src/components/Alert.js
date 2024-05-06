@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../css/alert.css';
 
 const Alert = ({ message, className }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    setIsVisible(true);
     const timer = setTimeout(() => {
       setIsVisible(false);
     }, 5000);
@@ -18,7 +16,6 @@ const Alert = ({ message, className }) => {
   };
 
   if (!isVisible) return null;
-
   const combinedClassName = `alert alert-${className}`;
 
   return (

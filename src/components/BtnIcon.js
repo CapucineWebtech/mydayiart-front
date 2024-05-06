@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/btnicon.css';
 import Icon from './Icon';
+import '../css/btnicon.css';
 
 const BtnIcon = ({ name, className, onclick, icon }) => {
   const combinedClassName = `btn btn-icon ${className}`;
@@ -15,5 +15,3 @@ const BtnIcon = ({ name, className, onclick, icon }) => {
 };
 
 export default BtnIcon;
-
-// <BtnIcon name="Créer un post avec l’image !" className="btn-secondary" icon="instagram" />

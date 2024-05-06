@@ -1,0 +1,29 @@
+.form-input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-input-group label{
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: var(--small-font-size);
+}
+
+.form-input-group input {
+    height: 36px;
+    background-color: var(--white-to-gray);
+    border-radius: 5px;
+    border: 1px solid;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-input-group input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px var(--white-to-gray) inset;
+}
+
+
+.form-group button{
+    margin-top: 30px;
+}

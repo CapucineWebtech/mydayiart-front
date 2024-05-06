@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     width: -webkit-fill-available;
+    z-index: 10;
 }
 
 .nav-link-active{
@@ -20,7 +21,7 @@
 
 .nav-app-name {
     font-weight: bold;
-    color: #000;
+    color: var(--black-to-white);
 }
 
 .nav-menu-icon {
@@ -36,8 +37,14 @@
 
 .nav-links li a {
     text-decoration: none;
-    color: #000;
+    color: var(--black-to-white);
     padding: 5px 5px;
+}
+
+.nav-links li span {
+    color: var(--black-to-white);
+    padding: 5px 5px;
+    cursor: pointer;
 }
 
 .nav-links li {
@@ -84,6 +91,15 @@
         background-color: var(--light-to-medium);
     }
 
+    .nav-links li span {
+        padding: 15px 45px;
+        display: block;
+    }
+
+    .nav-links li span:hover {
+        background-color: var(--light-to-medium);
+    }
+
     .nav-separator {
         height: 1px;
         background-color: var(--black-to-white);
@@ -93,7 +109,7 @@
 
     .nav-links.open {
         display: flex;
-        max-height: 156px;
+        max-height: 259px;
     }
 }
 

@@ -1,0 +1,40 @@
+.container-img {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+.container-img img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 85vh;
+    max-width: 85vh;
+    margin: 0 auto;
+}
+
+.container-right {
+    width: 67%;
+    padding-left: 30px;
+}
+
+.adds-draw-container{
+    width: 100%; 
+    background-color: red;
+    flex-grow: 1;
+    min-height: 15vh;
+}
+
+.container-flex-adds{
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+}
+
+@media (max-width: 768px) {
+    .adds-draw-container{
+        margin-top: var(--medium-margin);
+    }
+}

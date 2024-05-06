@@ -64,7 +64,7 @@ const Icon = ({ name, className, color, onClick }) => {
         case 'pause':
         return (
             <svg className={className} onClick={onClick} fill={color} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path xmlns="http://www.w3.org/2000/svg" d="M30.0 0v200H80V0h0.0Z m90 0v200H170V0h0.0Z"/>
+                <path d="M30.0 0v200H80V0h0.0Z m90 0v200H170V0h0.0Z"/>
             </svg>
         );
         case 'start':

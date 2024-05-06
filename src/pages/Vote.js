@@ -124,7 +124,7 @@ const Vote = () => {
           {formType === 'none' && userEmail && 
             <>
               {themesToday.length === 0 &&
-                <h1 className="main-title mt-reset mb-medium">{t("vote.sory-no-themes")}</h1>
+                <h1 className="main-title mt-reset mb-medium">{t("vote.sorry-no-themes")}</h1>
               }
               <div className="mt-medium mb-little">{t('vote.your-email')}{userEmail}</div>
               <div className={windowWidth > 768 ? 'container-btns' : ''}>

@@ -56,7 +56,7 @@ const Home = () => {
           <div style={{ width: windowWidth >= 900 ? '50%' : '100%' }}>
             <h1 className="main-title mt-medium mb-medium">{t('home.title')}</h1>
             <NavLink to="/draw" className="btn btn-primary">{t('home.button')}</NavLink>
-            <p className="mt-little">{t('home.reset-time')}{resetTimeLocal}</p>
+            <p className="mt-little">{t('home.reset-time')}{resetTimeLocal}.</p>
             <p className="text-justify mt-little" dangerouslySetInnerHTML={{ __html: t('home.description') }} />
             <SocialNetworksBtns />
           </div>

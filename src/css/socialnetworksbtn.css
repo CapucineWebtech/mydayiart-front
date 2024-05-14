@@ -35,4 +35,7 @@
 
 .social-networks-btns {
     display: flex;
+    max-width: 600px;
+    margin: 30px auto;
+    width: -webkit-fill-available;
 }

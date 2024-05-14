@@ -83,7 +83,7 @@ const Vote = () => {
 
   return (
     <>
-      {alert.show && <Alert key={alert.key} message={alert.message} className={alert.type} />}
+      {alert.show && alert.message !== "" && <Alert key={alert.key} message={alert.message} className={alert.type} />}
       <div className="page-container page-vote-container">
         <div className={windowWidth > 768 && formType !== 'none' ? 'd-flex' : ''}>
           {formType !== 'none' && 
@@ -135,7 +135,9 @@ const Vote = () => {
           }
         </div>
 
-        {formType !== 'newPassword' && <div className="adds-container"></div>}
+        {formType === 'none' &&
+          <SocialNetworksBtns className="mb-little"/>
+        }
       </div>
     </>
   );

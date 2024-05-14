@@ -70,7 +70,7 @@ const Draw = () => {
               )}
             </div>
           )}
-          <div className="mb-medium adds-draw-container"></div>
+          
           <SocialNetworksBtns />
         </div>
         {windowWidth >= 768 && (

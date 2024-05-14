@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { format } from 'date-fns';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
@@ -8,17 +8,11 @@ import '../css/home.css';
 
 
 const Home = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);  
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -53,18 +47,13 @@ const Home = () => {
         {i18n.language !== 'en' && <Btn name="Switch to English" className="btn-secondary" onclick={() => changeLanguage('en')} />}
         
         <div className="d-flex">
-          <div style={{ width: windowWidth >= 900 ? '50%' : '100%' }}>
+          <div style={{ width: '100%' }}>
             <h1 className="main-title mt-medium mb-medium">{t('home.title')}</h1>
             <NavLink to="/draw" className="btn btn-primary">{t('home.button')}</NavLink>
             <p className="mt-little">{t('home.reset-time')}{resetTimeLocal}.</p>
             <p className="text-justify mt-little" dangerouslySetInnerHTML={{ __html: t('home.description') }} />
             <SocialNetworksBtns />
           </div>
-          {windowWidth >= 900 && (
-            <div className="right-content">
-              <div style={{width: '100%', height: '100%', backgroundColor: 'red'}}></div>
-            </div>
-          )}
         </div>
       </div>
     </>

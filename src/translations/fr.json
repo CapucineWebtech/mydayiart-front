@@ -39,6 +39,7 @@
     "your-email": "Ton email : ",
     "button-logout": "Utiliser un autre mail",
     "button-delete-account": "Supprimer mon compte",
+    "popup-delete-account": "Es-tu sûr de vouloir supprimer ton compte ? Si tu fait ça, tu ne pourras plus voter.",
     "sorry-no-themes": "Désolé, il semble que les développeurs aient oublié de mettre des thèmes pour demain... 😅"
   },
   "404": {

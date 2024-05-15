@@ -39,6 +39,7 @@
     "your-email": "Your email: ",
     "button-logout": "Use another email",
     "button-delete-account": "Delete my account",
+    "popup-delete-account": "Are you sure you want to delete your account? If you do that, you won't be able to vote anymore.",
     "sorry-no-themes": "Sorry, it seems the developers forgot to put themes for tomorrow... 😅"
   },
   "404": {

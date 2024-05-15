@@ -6,6 +6,7 @@ import Form from '../components/Form';
 import Alert from '../components/Alert';
 import SocialNetworksBtns from "../components/SocialNetworksBtns";
 import Btn from '../components/Btn';
+import Popup from '../components/Popup';
 import '../css/vote.css';
 
 const Vote = () => {
@@ -18,6 +19,11 @@ const Vote = () => {
   const [userEmail, setUserEmail] = useState();
   const { t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+  const togglePopup = () => {
+    setPopupVisible(!isPopupVisible);
+  };
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -83,6 +89,13 @@ const Vote = () => {
 
   return (
     <>
+      <Popup
+          isVisible={isPopupVisible}
+          message={t("vote.popup-delete-account")}
+          onClose={togglePopup}
+        >
+        <Btn name={t("vote.button-delete-account")} className="btn-danger mb-little" onclick={handleDeleteUser} />
+      </Popup>
       {alert.show && alert.message !== "" && <Alert key={alert.key} message={alert.message} className={alert.type} />}
       <div className="page-container page-vote-container">
         <div className={windowWidth > 768 && formType !== 'none' ? 'd-flex' : ''}>
@@ -129,7 +142,7 @@ const Vote = () => {
               <div className="mt-medium mb-little">{t('vote.your-email')}{userEmail}</div>
               <div className={windowWidth > 768 ? 'container-btns' : ''}>
                 <Btn name={t("vote.button-logout")} className="btn-warning mb-little" onclick={() => {localStorage.removeItem('token'); setFormType('login');}} />
-                <Btn name={t("vote.button-delete-account")} className="btn-danger mb-little" onclick={handleDeleteUser} />
+                <Btn name={t("vote.button-delete-account")} className="btn-danger mb-little" onclick={togglePopup} />
               </div>
             </>
           }

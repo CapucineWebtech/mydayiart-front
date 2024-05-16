@@ -66,6 +66,7 @@ const Vote = () => {
     } catch (error) {
       setAlert({ show: true, message: error.response.data.error, type: 'error', key: new Date().getTime() });
     }
+    togglePopup();
   };
 
   const handleFormSwitch = (type) => {
